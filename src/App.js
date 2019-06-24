@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import NoteLi from "./Components/NoteLi/NoteLi";
+import Button from "./Components/Button/Button";
+import Input from "./Components/Input/Input";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    notes: ["Note 1", "Note 2"]
+  }
+
+
+  render() {
+
+    const notesArr = this.state.notes.map(note => <NoteLi>{note}</NoteLi>);
+
+
+
+    return (<div className="App">
+      <section className="mainPageSection">
+
+        <div className="sideView">
+          {notesArr}
+        </div>
+
+        <div className="dialogWindowView">
+          <div className="quickListView">
+            <div className="list">
+              {notesArr}
+            </div>
+
+            <div className="addNoteForm">
+              <Input type="text" className="addNoteInput" required placeholder="Add a note"></Input>
+              {/* <input type="text" className="addNoteInput" required placeholder="Add a note" /> */}
+              {/* <input type="submit" className="addNoteBtn" placeholder="Add to list" /> */}
+              <Input type="submit" className="addNoteBtn" placeholder="Add to list"></Input>
+            </div>
+
+          </div>
+          <Button>Minimze/Maximize</Button>
+        </div>
+
+      </section>
+    </div>);
+  }
 }
 
 export default App;

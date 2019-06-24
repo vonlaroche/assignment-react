@@ -1,0 +1,37 @@
+
+input[type=text]{
+    width: 60%;
+    border-radius: 5px;
+    color:#4D4D4D;
+    padding: 10px;
+    cursor:pointer;
+    border: 2px solid #b2b2c9
+}
+  
+input[type=text]:focus{
+    border:2px solid #424242;
+    outline:none;
+}
+  
+input[type=text]::selection{
+    background: #b3d4fc
+}
+  
+.addNoteBtn {
+    background-color:#2effc3;
+    border:1px solid #2effc3;
+    color: #011688;
+    padding: 0px 20px 3px;
+    line-height: 2;
+    font-size: 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    outline:none;
+    transition: all 0.2s ease-in;
+}
+  
+.addNoteBtn:hover {
+    background-color: #ffd900;
+    border:1px solid #ffd900;
+}

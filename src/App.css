@@ -1,33 +1,103 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.mainPageSection{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sideView{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width:30%;
+  margin-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.dialogWindowView {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.quickListView{
+  width: 60%;
+  height: 350px;
+  border: 2px solid #f55;
+  margin-top: 30px;
+  border-radius: 20px;
+  opacity:1;
+  /* background-color:#b3d4fc; */
+  /* transition: all 0.5s linear; */
+  animation: slide-up 0.3s ease; 
+}
+
+.quickListView.hide{
+  opacity:0;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color:white;
+}
+::-webkit-scrollbar-track {
+  margin: 0;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: darkgrey;
+outline: none;
+}
+
+
+.list {
+  height: 250px;
+  width: 80%;
+  padding: 20px;
+  margin:10px auto;
+  border: 2px solid #f55;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 5px;
+  background-color: white;
+ 
+}
+
+.addNoteForm{
+  padding-top: 10px;
+  margin: 10px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;  
+}
+
+
+i {
+  background-color: #2effc3;
+  color: #011688;
+  border:none;
+  margin: 2px;
+  cursor:pointer;
+}
+
+
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
+
+

@@ -1,0 +1,11 @@
+li {
+    list-style: none;
+    border-bottom: 1px solid #f55;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    word-break: break-all;
+    color:#4D4D4D;
+    animation: slide-up 0.5s ease; 
+  }
