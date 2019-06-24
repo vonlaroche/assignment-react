@@ -17,13 +17,14 @@ input[type=text]::selection{
     background: #b3d4fc
 }
   
-.addNoteBtn {
+input[type=submit] {
     background-color:#2effc3;
     border:1px solid #2effc3;
     color: #011688;
     padding: 0px 20px 3px;
     line-height: 2;
     font-size: 1em;
+    letter-spacing: 0.1em;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
@@ -31,7 +32,7 @@ input[type=text]::selection{
     transition: all 0.2s ease-in;
 }
   
-.addNoteBtn:hover {
+input[type=submit]:hover {
     background-color: #ffd900;
     border:1px solid #ffd900;
 }
