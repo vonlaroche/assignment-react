@@ -7,7 +7,8 @@ const Input = props => {
         type={props.type}
         className={props.className}
         placeholder={props.placeholder}
-        required={props.required}>
+        required={props.required}
+        onChange={props.onChange}>
     </input>;
 }
 
