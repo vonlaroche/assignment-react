@@ -11,6 +11,16 @@ h3 {
   line-height: 1;
   font-weight: 700;
   margin-top: 10px;
+  animation: slide-up 0.4s linear;
+}
+
+.listTitle{
+  text-align: center;
+  padding:0;
+  margin:50px 0;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  font-size:2em;
 }
 
 
@@ -19,6 +29,7 @@ hr {
   background: #dddded;
   border: 0;
   margin: 5px 0;
+  animation: slide-up 0.4s linear;
 }
 
 .mainPageSection{
@@ -55,11 +66,11 @@ hr {
   width: 50%;
   height: 80vh;
   margin-top: 30px;
-  border-radius: 10px;
-  box-shadow: 5px 6px 8px rgba(44, 44, 44, 0.3);
+  border-radius: 10px 10px 20px 20px;
+  box-shadow:rgba(0, 0, 0, 0.16) 0px 5px 40px;
   opacity:1;
   background-color: #242424;
-  transition: all 0.5s linear; 
+  transition: all 0.3s linear; 
 }
 
 .quickListView.hide{
@@ -81,7 +92,7 @@ outline: none;
 
 
 .list {
-  height: 70%;
+  flex:1;
   width: 100%;
   padding: 15px;
   overflow-y: auto;
@@ -89,15 +100,6 @@ outline: none;
   background-color: white;
   border-bottom: 1px solid rgba(36, 36, 36, 0.2);
 }
-
-.addNoteForm{
-  padding: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between; 
-  background-color: white; 
-}
-
 
 
 @keyframes slide-up {
@@ -121,6 +123,9 @@ outline: none;
   .quickListView{
     width: 80%;
   }
+  .listTitle{
+    font-size: 1.8em;
+  }
 }
 
 @media all and (max-width:768px){
@@ -130,6 +135,9 @@ outline: none;
   .quickListView{
     width: 90%;
   }
+  .listTitle{
+    font-size: 1.7em;
+  }
 }
 
 @media all and (max-width:425px){
@@ -138,8 +146,17 @@ outline: none;
  }
  .sideView{
   width: 80%;
+  margin:0 auto;
  }
+ .listTitle{
+  font-size: 1.6em;
+  margin:40px 0;
+}
  .dialogWindowView{
-  width: 80%;
+  display: flex;
+  width: 90%;
+  height: 70%;
+  position: fixed;
+  bottom: 0;
  }
 }

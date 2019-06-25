@@ -2,13 +2,14 @@ li {
     list-style: none;
     border-bottom: 1px solid rgba(110, 110, 110, 0.5);
     padding-bottom: 2px;
-    height: 80px;
+    min-height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     color:#4D4D4D;
     animation: slide-up 0.5s ease; 
-    margin: 5px 0px;
+    margin-top: 30px;
+    margin-bottom: 5px;
     word-break: break-all;
 }
 

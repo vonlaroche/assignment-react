@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import NoteListItem from "./Components/NoteListItem/NoteListItem";
 import Icon from "./Components/Icon/Icon";
-import Input from "./Components/Input/Input";
-import Delay from "react-delay";
+import NoteList from "./Components/NoteList/NoteList";
+import AddNoteForm from "./Components/AddNoteForm/AddNoteForm";
 import './App.css';
 
 
 class App extends Component {
 
   state = {
-    notes: ["Note 1", "Note 2"],
+    notes: ["Proper Note 1",
+      "Proper Note 2",
+      "😀",
+      "",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."],
     newNoteValue: "",
     isHidden: true
   }
@@ -48,45 +51,22 @@ class App extends Component {
         <div className="sideView">
           <h3>My notes</h3>
           <hr />
-          {this.state.notes.map((note, index) => {
-            return <Delay wait={2000}>
-              <NoteListItem  
-              checkNote={note} 
-              key={index} 
-              delete={() => this.handleDeleteNote(index)}>
-              {note}
-              </NoteListItem>
-            </Delay>
-          }
-          )}
+          <NoteList notes={this.state.notes} wait={2000} onDelete={this.handleDeleteNote} />
         </div>
 
         <div className="dialogWindowView">
 
           <div className={this.state.isHidden ? "quickListView hide" : "quickListView"}>
+            <h3 className="listTitle">Append some new notes</h3>
             <div className="list">
-              {this.state.notes.map((note, index) =>
-                <Delay wait={1000}>
-                  <NoteListItem
-                    checkNote={note}
-                    key={index}
-                    delete={() => this.handleDeleteNote(index)}>
-                    {note}
-                  </NoteListItem>
-                </Delay>)}
+              <NoteList notes={this.state.notes} wait={1000} onDelete={this.handleDeleteNote} />
             </div>
 
-            <form onSubmit={this.handleAddNote} className="addNoteForm">
-              <Input
-                type="text"
-                value={this.state.newNoteValue}
-                // required
-                placeholder="Add a note"
-                onChange={this.handleInputChange}>
-              </Input>
-              <Input type="submit" value="Submit" placeholder="Add to list"></Input>
-            </form>
-
+            <AddNoteForm
+              onSubmit={this.handleAddNote}
+              value={this.state.newNoteValue}
+              onChange={this.handleInputChange}
+            />
           </div>
           <Icon click={this.handleMinMax}></Icon>
         </div>

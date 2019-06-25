@@ -4,8 +4,11 @@ import ErrorSpan from "../ErrorSpan/ErrorSpan";
 
 const NoteListItem = props => {
     return (<>
-        <li>{props.children}<i className="fas fa-trash-alt deleteIcon" onClick={props.delete}></i></li>
-        <ErrorSpan checkNote={props.checkNote} />
+        <li>
+            <span>{props.children}</span>
+            <i className="fas fa-trash-alt deleteIcon" onClick={props.delete}></i>
+        </li>
+        <ErrorSpan checkNote={props.checkNote}/>
     </>);
 }
 

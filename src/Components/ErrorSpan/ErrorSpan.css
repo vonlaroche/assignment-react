@@ -1,16 +1,14 @@
-span{
+.errorSpan{
     color: #ce0000;
-    border-bottom: 1px solid #ce0000;
     margin-top: 2px;
     padding: 1px;
-    word-break: break-all;
     font-size: 0.9em;
 }
 
 
 @media all and (max-width:768px){
-    span{
+    .errorSpan{
       font-size: 0.8em;
     }
-  }
+}
   
