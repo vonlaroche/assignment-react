@@ -1,8 +1,12 @@
 import React from "react";
 import "./NoteListItem.css";
+import ErrorSpan from "../ErrorSpan/ErrorSpan";
 
 const NoteListItem = props => {
-    return <li>{props.children}<i className="fas fa-trash-alt deleteIcon" onClick={props.delete}></i></li>;
+    return (<>
+        <li>{props.children}<i className="fas fa-trash-alt deleteIcon" onClick={props.delete}></i></li>
+        <ErrorSpan checkNote={props.checkNote} />
+    </>);
 }
 
 export default NoteListItem;

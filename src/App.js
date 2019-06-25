@@ -6,7 +6,6 @@ import Delay from "react-delay";
 import './App.css';
 
 
-
 class App extends Component {
 
   state = {
@@ -48,12 +47,18 @@ class App extends Component {
 
         <div className="sideView">
           <h3>My notes</h3>
-          <hr/>
-          {this.state.notes.map((note, index) =>
-            <Delay wait={2000}>
-              <NoteListItem key={index} delete={() => this.handleDeleteNote(index)}>{note}
+          <hr />
+          {this.state.notes.map((note, index) => {
+            return <Delay wait={2000}>
+              <NoteListItem  
+              checkNote={note} 
+              key={index} 
+              delete={() => this.handleDeleteNote(index)}>
+              {note}
               </NoteListItem>
-            </Delay>)}
+            </Delay>
+          }
+          )}
         </div>
 
         <div className="dialogWindowView">
@@ -61,14 +66,21 @@ class App extends Component {
           <div className={this.state.isHidden ? "quickListView hide" : "quickListView"}>
             <div className="list">
               {this.state.notes.map((note, index) =>
-                <Delay wait={1000}> <NoteListItem key={index} delete={() => this.handleDeleteNote(index)}>{note}</NoteListItem> </Delay>)}
+                <Delay wait={1000}>
+                  <NoteListItem
+                    checkNote={note}
+                    key={index}
+                    delete={() => this.handleDeleteNote(index)}>
+                    {note}
+                  </NoteListItem>
+                </Delay>)}
             </div>
 
             <form onSubmit={this.handleAddNote} className="addNoteForm">
               <Input
                 type="text"
                 value={this.state.newNoteValue}
-                required
+                // required
                 placeholder="Add a note"
                 onChange={this.handleInputChange}>
               </Input>

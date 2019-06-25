@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "emoji-regex": "^8.0.0",
     "react": "^16.8.6",
     "react-delay": "^0.1.0",
     "react-dom": "^16.8.6",
