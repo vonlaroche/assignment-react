@@ -47,6 +47,8 @@ class App extends Component {
       <section className="mainPageSection">
 
         <div className="sideView">
+          <h3>My notes</h3>
+          <hr/>
           {this.state.notes.map((note, index) =>
             <Delay wait={2000}>
               <NoteListItem key={index} delete={() => this.handleDeleteNote(index)}>{note}

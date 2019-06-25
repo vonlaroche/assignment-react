@@ -5,6 +5,21 @@
   font-family: 'Roboto', sans-serif;
 }
 
+h3 {
+  color: #f55;
+  font-size: 1.8em;
+  line-height: 1;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+hr {
+  height: 2px;
+  background: #dddded;
+  border: 0;
+  margin: 5px 0;
+}
+
 .mainPageSection{
   display: flex;
   flex-direction: row;
@@ -38,7 +53,6 @@
   justify-content: flex-end;
   width: 60%;
   height: 60vh;
-  border: 2px solid #242424;
   margin-top: 30px;
   border-radius: 10px;
   box-shadow: 5px 6px 8px rgba(44, 44, 44, 0.3);
@@ -67,13 +81,10 @@ outline: none;
 
 .list {
   height: 70%;
-  width: 80%;
+  width: 100%;
   padding: 15px;
-  margin:10px auto;
-  border: 2px solid #242424;
   overflow-y: auto;
   overflow-x: hidden;
-  border-radius: 3px;
   background-color: white;
   box-shadow: 2px 2px 8px rgba(44, 44, 44, 0.3);
 }
@@ -86,14 +97,6 @@ outline: none;
   justify-content: space-between;  
 }
 
-
-i {
-  background-color: #2effc3;
-  color: #011688;
-  border:none;
-  margin: 2px;
-  cursor:pointer;
-}
 
 
 @keyframes slide-up {
