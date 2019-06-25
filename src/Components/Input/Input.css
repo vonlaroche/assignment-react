@@ -4,14 +4,11 @@ input[type=text]{
     color:#4D4D4D;
     padding: 10px;
     cursor:pointer;
-    /* border: 2px solid #b2b2c9 */
     outline: none;
     border:none;
 }
   
 input[type=text]:focus{
-    /* border:2px solid #424242; */
-  
     outline:none;
 }
   
