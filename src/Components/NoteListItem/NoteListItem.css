@@ -22,10 +22,19 @@ i {
   cursor:pointer;
 }
 
+@media all and (max-width:1366px){
+  li{
+    font-size: 0.83em;
+    min-height: 40px;
+  }
+}
+
 
 @media all and (max-width:768px){
   li{
     font-size: 0.8em;
   }
 }
+
+
 

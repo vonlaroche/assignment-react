@@ -2,14 +2,15 @@
   "name": "record-union-react-assignment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/vonlaroche/assignment-react",
+  "homepage": "https://vonlaroche.github.io/assignment-react",
   "dependencies": {
     "emoji-regex": "^8.0.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-delay": "^0.1.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-test-renderer": "^16.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
