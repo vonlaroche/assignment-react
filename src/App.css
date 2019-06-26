@@ -163,10 +163,5 @@ outline: none;
  }
  .quickListView{
    height: 100%;
-   display:flex;
- }
- .quickListView.hide{
-   height: 100%;
-   display:none;
  }
 }
