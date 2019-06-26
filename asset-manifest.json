@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vonlaroche/assignment-react/static/css/main.a9291b9a.chunk.css",
+    "main.css": "/vonlaroche/assignment-react/static/css/main.66e16bb5.chunk.css",
     "main.js": "/vonlaroche/assignment-react/static/js/main.0ae1a142.chunk.js",
     "main.js.map": "/vonlaroche/assignment-react/static/js/main.0ae1a142.chunk.js.map",
     "runtime~main.js": "/vonlaroche/assignment-react/static/js/runtime~main.48654e49.js",
@@ -8,8 +8,8 @@
     "static/js/2.6e498eb3.chunk.js": "/vonlaroche/assignment-react/static/js/2.6e498eb3.chunk.js",
     "static/js/2.6e498eb3.chunk.js.map": "/vonlaroche/assignment-react/static/js/2.6e498eb3.chunk.js.map",
     "index.html": "/vonlaroche/assignment-react/index.html",
-    "precache-manifest.b8de238c90233db0d2ec320567b57dea.js": "/vonlaroche/assignment-react/precache-manifest.b8de238c90233db0d2ec320567b57dea.js",
+    "precache-manifest.d3aa34353cf926def1722709b19458bb.js": "/vonlaroche/assignment-react/precache-manifest.d3aa34353cf926def1722709b19458bb.js",
     "service-worker.js": "/vonlaroche/assignment-react/service-worker.js",
-    "static/css/main.a9291b9a.chunk.css.map": "/vonlaroche/assignment-react/static/css/main.a9291b9a.chunk.css.map"
+    "static/css/main.66e16bb5.chunk.css.map": "/vonlaroche/assignment-react/static/css/main.66e16bb5.chunk.css.map"
   }
 }
