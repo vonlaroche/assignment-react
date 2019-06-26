@@ -156,12 +156,17 @@ outline: none;
 }
  .dialogWindowView{
   display: flex;
-  width: 70%;
+  width: 90%;
   height: 100%;
   position: fixed;
   bottom: 0;
  }
  .quickListView{
    height: 100%;
+   display:flex;
  }
+ .quickListView.hide{
+  height: 100%;
+  display:none;
+}
 }
