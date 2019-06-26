@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/vonlaroche/assignment-react/static/css/main.66e16bb5.chunk.css",
-    "main.js": "/vonlaroche/assignment-react/static/js/main.0ae1a142.chunk.js",
-    "main.js.map": "/vonlaroche/assignment-react/static/js/main.0ae1a142.chunk.js.map",
-    "runtime~main.js": "/vonlaroche/assignment-react/static/js/runtime~main.48654e49.js",
-    "runtime~main.js.map": "/vonlaroche/assignment-react/static/js/runtime~main.48654e49.js.map",
-    "static/js/2.6e498eb3.chunk.js": "/vonlaroche/assignment-react/static/js/2.6e498eb3.chunk.js",
-    "static/js/2.6e498eb3.chunk.js.map": "/vonlaroche/assignment-react/static/js/2.6e498eb3.chunk.js.map",
-    "index.html": "/vonlaroche/assignment-react/index.html",
-    "precache-manifest.d3aa34353cf926def1722709b19458bb.js": "/vonlaroche/assignment-react/precache-manifest.d3aa34353cf926def1722709b19458bb.js",
-    "service-worker.js": "/vonlaroche/assignment-react/service-worker.js",
-    "static/css/main.66e16bb5.chunk.css.map": "/vonlaroche/assignment-react/static/css/main.66e16bb5.chunk.css.map"
+    "main.css": "/assignment-react/static/css/main.66e16bb5.chunk.css",
+    "main.js": "/assignment-react/static/js/main.0ae1a142.chunk.js",
+    "main.js.map": "/assignment-react/static/js/main.0ae1a142.chunk.js.map",
+    "runtime~main.js": "/assignment-react/static/js/runtime~main.06260452.js",
+    "runtime~main.js.map": "/assignment-react/static/js/runtime~main.06260452.js.map",
+    "static/js/2.6e498eb3.chunk.js": "/assignment-react/static/js/2.6e498eb3.chunk.js",
+    "static/js/2.6e498eb3.chunk.js.map": "/assignment-react/static/js/2.6e498eb3.chunk.js.map",
+    "index.html": "/assignment-react/index.html",
+    "precache-manifest.ca049dbf051b7a5da847a6dda3dd0a39.js": "/assignment-react/precache-manifest.ca049dbf051b7a5da847a6dda3dd0a39.js",
+    "service-worker.js": "/assignment-react/service-worker.js",
+    "static/css/main.66e16bb5.chunk.css.map": "/assignment-react/static/css/main.66e16bb5.chunk.css.map"
   }
 }
