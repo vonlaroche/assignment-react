@@ -151,14 +151,17 @@ outline: none;
   margin:0 auto;
  }
  .listTitle{
-  font-size: 1.6em;
-  margin:40px 0;
+  font-size: 1.4em;
+  margin:20px 0;
 }
  .dialogWindowView{
   display: flex;
-  width: 90%;
-  height: 70%;
+  width: 70%;
+  height: 100%;
   position: fixed;
   bottom: 0;
+ }
+ .quickListView{
+   height: 100%;
  }
 }
