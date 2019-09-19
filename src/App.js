@@ -7,17 +7,6 @@ import './App.css';
 
 const App = () => {
 
-  // state = {
-  //   notes: ["Proper Note 1",
-  //     "Proper Note 2",
-  //     "😀",
-  //     "",
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."],
-  //   newNoteValue: "",
-  //   isHidden: true
-  // }
-
-
   const [notes, setNotes] = useState(["Proper Note 1", "Proper Note 2", "😀", "",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."]);
 
@@ -49,7 +38,6 @@ const App = () => {
       setIsHidden(true);
     }
   }
-
 
 
   return (<div className="App">
