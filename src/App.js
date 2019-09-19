@@ -1,79 +1,86 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Icon from "./Components/Icon/Icon";
 import NoteList from "./Components/NoteList/NoteList";
 import AddNoteForm from "./Components/AddNoteForm/AddNoteForm";
 import './App.css';
 
 
-class App extends Component {
+const App = () => {
 
-  state = {
-    notes: ["Proper Note 1",
-      "Proper Note 2",
-      "😀",
-      "",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."],
-    newNoteValue: "",
-    isHidden: true
+  // state = {
+  //   notes: ["Proper Note 1",
+  //     "Proper Note 2",
+  //     "😀",
+  //     "",
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."],
+  //   newNoteValue: "",
+  //   isHidden: true
+  // }
+
+
+  const [notes, setNotes] = useState(["Proper Note 1", "Proper Note 2", "😀", "",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus ante metus, vel consectetur urna mollis ut. Fusce vel massa vestibulum, viverra sem eget, gravida lectus. Aliquam ac dui non."]);
+
+  const [newNote, setNewNote] = useState("");
+  const [isHidden, setIsHidden] = useState(true);
+
+  const handleInputChange = event => {
+    setNewNote(event.target.value);
   }
 
-
-  handleInputChange = event => {
-    this.setState({ newNoteValue: event.target.value })
-  }
-
-  handleAddNote = event => {
+  const handleAddNote = event => {
     event.preventDefault();
-    let noteToAdd = this.state.newNoteValue;
-    this.setState({ notes: this.state.notes.concat(noteToAdd), newNoteValue: "" });
+    let noteToAdd = newNote;
+    setNotes(notes.concat(noteToAdd));
+    setNewNote("");
   }
 
-  handleDeleteNote = index => {
-    let array = [...this.state.notes]; // make a separate copy of the array
+  const handleDeleteNote = index => {
+    let array = [...notes]; // make a separate copy of the array
     array.splice(index, 1);
-    this.setState({ notes: array });
+    setNotes(array);
   }
 
-  handleMinMax = () => {
-    if (this.state.isHidden) {
-      this.setState({ isHidden: false })
+  const handleMinMax = () => {
+    if (isHidden) {
+      setIsHidden(false);
     }
     else {
-      this.setState({ isHidden: true })
+      setIsHidden(true);
     }
   }
 
-  render() {
 
-    return (<div className="App">
-      <section className="mainPageSection">
 
-        <div className="sideView">
-          <h3>My notes</h3>
-          <hr />
-          <NoteList notes={this.state.notes} wait={2000} onDelete={this.handleDeleteNote} />
-        </div>
+  return (<div className="App">
+    <section className="mainPageSection">
 
-        <div className="dialogWindowView">
+      <div className="sideView">
+        <h3>My notes</h3>
+        <hr />
+        <NoteList notes={notes} wait={2000} onDelete={handleDeleteNote} />
+      </div>
 
-          <div className={this.state.isHidden ? "quickListView hide" : "quickListView"}>
-            <h3 className="listTitle">Append some new notes</h3>
-            <div className="list">
-              <NoteList notes={this.state.notes} wait={1000} onDelete={this.handleDeleteNote} />
-            </div>
+      <div className="dialogWindowView">
 
-            <AddNoteForm
-              onSubmit={this.handleAddNote}
-              value={this.state.newNoteValue}
-              onChange={this.handleInputChange}
-            />
+        <div className={isHidden ? "quickListView hide" : "quickListView"}>
+          <h3 className="listTitle">Append some new notes</h3>
+          <div className="list">
+            <NoteList notes={notes} wait={1000} onDelete={handleDeleteNote} />
           </div>
-          <Icon click={this.handleMinMax}></Icon>
-        </div>
 
-      </section>
-    </div>);
-  }
+          <AddNoteForm
+            onSubmit={handleAddNote}
+            value={newNote}
+            onChange={handleInputChange}
+          />
+        </div>
+        <Icon click={handleMinMax}></Icon>
+      </div>
+
+    </section>
+  </div>);
+
 }
 
 export default App;
